@@ -11,18 +11,19 @@ namespace CS_FORM
     internal class TestButton : Button
     {
         public TestButton(int x,int y,
-            int width, int height)
+            int width, int height,
+            string number)
         {
             //clickイベントにonclickを登録
             Click += Onclick;
-            Text = "ボタン";
+            Text = $"ボタン{number}";
             Location = new Point(x,y);
             Size = new Size(width,height);
         }
 
         public void Onclick(object sender, EventArgs s)
         {
-            MessageBox.Show("オッス!オラ悟空!");
+            MessageBox.Show($"これは{Text}です");
 
         }
     }

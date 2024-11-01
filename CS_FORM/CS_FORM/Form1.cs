@@ -18,7 +18,8 @@ namespace CS_FORM
 
             for (int countcreate = 0; countcreate <= 10;countcreate++)    
             {
-                TestButton testButton = new TestButton(countcreate % 3 * 100, countcreate / 3 * 100, 100, 100);
+                string countstring = (countcreate+1).ToString();
+                TestButton testButton = new TestButton(countcreate % 3 * 100, countcreate / 3 * 100, 100, 100,countstring);
                 Controls.Add(testButton);
             }
         }
