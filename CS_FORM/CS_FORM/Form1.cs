@@ -14,17 +14,12 @@ namespace CS_FORM
     {
         public Form1()
         {
-            int countcreate = 1;
-            int locationpoint = 0;
             InitializeComponent();
 
-            while (countcreate < 100)
+            for (int countcreate = 0; countcreate <= 10;countcreate++)    
             {
-                locationpoint = (countcreate
-                    - 1) * 100;
-                TestButton testButton = new TestButton(locationpoint, 0, 100, 100);
+                TestButton testButton = new TestButton(countcreate % 3 * 100, countcreate / 3 * 100, 100, 100);
                 Controls.Add(testButton);
-                countcreate++;
             }
         }
     }
