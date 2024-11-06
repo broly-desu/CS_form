@@ -22,10 +22,12 @@ namespace CS_FORM
                 TestButton testButton = new TestButton(countcreate % 3 * 100, countcreate / 3 * 100, 100, 100,countstring);
                 Controls.Add(testButton);
             }
-            Label testlabel = new Label();
-            testlabel.Location = new Point(1000,0);
-            testlabel.Text = "aa";
+            testlabel testlabel = new testlabel("ラベルのテスト", 1000, 300, 100, 500);
             Controls.Add(testlabel);
-        }
+            ///Label testlabel = new Label();
+            ///testlabel.Location = new Point(1000,0);
+            ///testlabel.Text = "aa";
+            ///Controls.Add(testlabel);
+        }   
     }
 }
