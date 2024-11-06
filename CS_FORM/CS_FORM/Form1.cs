@@ -12,6 +12,7 @@ namespace CS_FORM
 {
     public partial class Form1 : Form
     {
+        Testlabel _Testlabel;
         public Form1()
         {
             InitializeComponent();
@@ -19,15 +20,17 @@ namespace CS_FORM
             for (int countcreate = 0; countcreate <= 10;countcreate++)    
             {
                 string countstring = (countcreate+1).ToString();
-                TestButton testButton = new TestButton(countcreate % 3 * 100, countcreate / 3 * 100, 100, 100,countstring);
+                TestButton testButton = new TestButton(this,countcreate % 5 * 100, countcreate / 5 * 100, 100, 100,countstring);
                 Controls.Add(testButton);
             }
-            testlabel testlabel = new testlabel("ラベルのテスト", 1000, 300, 100, 500);
-            Controls.Add(testlabel);
+            _Testlabel = 
+                new Testlabel("ラベルのテスト",0,300, 500, 200);
+            Controls.Add(_Testlabel);
+
             ///Label testlabel = new Label();
             ///testlabel.Location = new Point(1000,0);
             ///testlabel.Text = "aa";
             ///Controls.Add(testlabel);
-        }   
+        }
     }
 }

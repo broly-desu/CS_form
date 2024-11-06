@@ -57,7 +57,7 @@
     <Compile Include="TestButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="testlabel.cs">
+    <Compile Include="Testlabel.cs">
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
