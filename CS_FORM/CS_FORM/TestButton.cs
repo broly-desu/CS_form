@@ -23,9 +23,10 @@ namespace CS_FORM
             Size = new Size(width,height);
         }
 
+        
         public void Onclick(object sender, EventArgs s)
         {
-            
+            _form1.labeltextupgrade($"{Text}をクリックしました");
         }
     }
 }

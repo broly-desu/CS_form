@@ -30,7 +30,11 @@ namespace CS_FORM
             ///Label testlabel = new Label();
             ///testlabel.Location = new Point(1000,0);
             ///testlabel.Text = "aa";
-            ///Controls.Add(testlabel);
+            ///Controls.Add(testlabel);            
+        }
+        public void labeltextupgrade(string str)
+        {
+            _Testlabel.updatetext(str);
         }
     }
 }

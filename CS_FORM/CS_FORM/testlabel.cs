@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CS_FORM
 {
-     class Testlabel : Label
+    class Testlabel : Label
     {
         public Testlabel(string str, int x, int y, int width, int height)
         {
@@ -17,8 +17,13 @@ namespace CS_FORM
 
             Location = new Point(x, y);
 
-            Size = new Size(width,height);
+            Size = new Size(width, height);
 
+        }
+
+        public void updatetext(string str)
+        {
+            Text = str;
         }
     }
 }
