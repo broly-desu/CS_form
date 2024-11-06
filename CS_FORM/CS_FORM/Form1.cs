@@ -32,9 +32,9 @@ namespace CS_FORM
             ///testlabel.Text = "aa";
             ///Controls.Add(testlabel);            
         }
-        public void labeltextupgrade(string str)
+        public void labeltextupgrade(int number)
         {
-            _Testlabel.updatetext(str);
+            _Testlabel.updatetext(number);
         }
     }
 }

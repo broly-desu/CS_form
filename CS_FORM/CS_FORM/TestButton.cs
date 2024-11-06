@@ -16,6 +16,7 @@ namespace CS_FORM
             string number)
         {
             _form1 = form1;
+            Name = number;
             //clickイベントにonclickを登録
             Click += Onclick;
             Text = $"ボタン{number}";
@@ -26,7 +27,7 @@ namespace CS_FORM
         
         public void Onclick(object sender, EventArgs s)
         {
-            _form1.labeltextupgrade($"{Text}をクリックしました");
+            _form1.labeltextupgrade(int.Parse(Name));
         }
     }
 }
