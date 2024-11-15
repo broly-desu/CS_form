@@ -13,6 +13,8 @@ namespace CS_FORM
     public partial class Form1 : Form
     {
         Testlabel _Testlabel;
+        TestButton _TestButton;
+        testtextbox _testtextbox;
         public Form1()
         {
             InitializeComponent();
@@ -44,12 +46,18 @@ namespace CS_FORM
             ///testlabel.Location = new Point(1000,0);
             ///testlabel.Text = "aa";
             ///Controls.Add(testlabel);      
-            testtextbox testtextbox = new testtextbox("戦う意思を見せなければ俺はこの星を破壊しつくすだけだぁ…", 0, 320, 500, 200);
-            Controls.Add(testtextbox);
+            _testtextbox = new testtextbox("戦う意思を見せなければ俺はこの星を破壊しつくすだけだぁ…", 0, 320, 500, 200);
+            Controls.Add(_testtextbox);
         }
         public void labeltextupgrade(int number)
         {
             _Testlabel.updatetext(number);
+        }
+        public string textboxupgrade(string text) 
+        {
+            string str = _testtextbox.Text;
+            _testtextbox.Text = text;
+            return str;
         }
     }
 }

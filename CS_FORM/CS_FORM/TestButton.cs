@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,6 +12,7 @@ namespace CS_FORM
     internal class TestButton : Button
     {
         Form1 _form1;
+        testtextbox _testtextbox;
         public TestButton(Form1 form1 ,int x,int y,
             int width, int height,
             int number, string[] name)
@@ -28,7 +30,9 @@ namespace CS_FORM
         
         public void Onclick(object sender, EventArgs s)
         {
-            _form1.labeltextupgrade(int.Parse(Name));
+            //_form1.labeltextupgrade(int.Parse(Name));
+            Text = _form1.textboxupgrade(Text);
+
         }
     }
 }

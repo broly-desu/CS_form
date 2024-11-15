@@ -12,6 +12,7 @@ namespace CS_FORM
     {
         public testtextbox(string str, int x, int y, int width, int height)
         {
+            Name = str;
 
             Text = str;
 
