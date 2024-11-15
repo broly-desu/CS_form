@@ -13,13 +13,14 @@ namespace CS_FORM
         Form1 _form1;
         public TestButton(Form1 form1 ,int x,int y,
             int width, int height,
-            string number)
+            int number, string[] name)
         {
             _form1 = form1;
-            Name = number;
+            string numberstr = number.ToString();
+            Name = numberstr;
             //clickイベントにonclickを登録
             Click += Onclick;
-            Text = $"ボタン{number}";
+            Text = $"{name[number]}";
             Location = new Point(x,y);
             Size = new Size(width,height);
         }

@@ -16,21 +16,36 @@ namespace CS_FORM
         public Form1()
         {
             InitializeComponent();
+            string[] strs =
+            {
+                "アカ",
+                "アオ",
+                "キ",
+                "オレンジ",
+                "ミドリ",
+                "ブロリー",
+                "パラガス",
+                "カカロット",
+                "ベジータ",
+                "虫ケラ",
+                "トランクス",
+            };
 
             for (int countcreate = 0; countcreate <= 10;countcreate++)    
             {
-                string countstring = (countcreate+1).ToString();
-                TestButton testButton = new TestButton(this,countcreate % 5 * 100, countcreate / 5 * 100, 100, 100,countstring);
+                TestButton testButton = new TestButton(this,countcreate % 5 * 100, countcreate / 5 * 100, 100, 100, countcreate, strs);
                 Controls.Add(testButton);
             }
             _Testlabel = 
-                new Testlabel("ラベルのテスト",0,300, 500, 200);
+                new Testlabel("ラベルのテスト",0,300, 500, 20);
             Controls.Add(_Testlabel);
 
             ///Label testlabel = new Label();
             ///testlabel.Location = new Point(1000,0);
             ///testlabel.Text = "aa";
-            ///Controls.Add(testlabel);            
+            ///Controls.Add(testlabel);      
+            testtextbox testtextbox = new testtextbox("戦う意思を見せなければ俺はこの星を破壊しつくすだけだぁ…", 0, 320, 500, 200);
+            Controls.Add(testtextbox);
         }
         public void labeltextupgrade(int number)
         {
